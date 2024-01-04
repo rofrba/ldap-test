@@ -51,7 +51,6 @@ objectClass: top
 objectClass: groupOfNames
 cn: developer
 member: uid=pepito,ou=Users,dc=example,dc=com
-member: uid=jsmith,ou=Users,dc=example,dc=com
 
 dn: cn=tester,ou=Roles,dc=example,dc=com
 objectClass: top
