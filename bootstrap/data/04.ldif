@@ -1,0 +1,60 @@
+dn: dc=example,dc=com
+dc: example
+objectClass: top
+objectClass: domain
+
+dn: ou=Users,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: Users
+
+dn: uid=jsmith,ou=Users,dc=example,dc=com
+objectClass: top
+objectClass: person
+objectClass: inetOrgPerson
+cn: John Smith
+sn: smith
+uid: jsmith
+userPassword: password123
+
+dn: uid=pepito,ou=Users,dc=example,dc=com
+objectClass: top
+objectClass: person
+objectClass: inetOrgPerson
+cn: Pepito Juarez
+sn: pepito
+uid: pepito
+userPassword: password123
+
+dn: uid=juancito,ou=Users,dc=example,dc=com
+objectClass: top
+objectClass: person
+objectClass: inetOrgPerson
+cn: Juancito Lopez
+sn: juancito
+uid: juancito
+userPassword: password123
+
+dn: ou=Roles,dc=example,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: Roles
+
+dn: cn=admin,ou=Roles,dc=example,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: admin
+member: uid=jsmith,ou=Users,dc=example,dc=com
+
+dn: cn=developer,ou=Roles,dc=example,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: developer
+member: uid=pepito,ou=Users,dc=example,dc=com
+member: uid=jsmith,ou=Users,dc=example,dc=com
+
+dn: cn=tester,ou=Roles,dc=example,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: tester
+member: uid=juancito,ou=Users,dc=example,dc=com
